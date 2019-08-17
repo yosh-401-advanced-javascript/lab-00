@@ -12,6 +12,8 @@ const pol = require('./pol.js');
 
 const app = express();
 
+const PORT = process.env.PORT || 3000;
+
 app.use('/docs', express.static('./docs'));
 
 /**
@@ -30,5 +32,5 @@ function requestHandler(req,res) {
   res.end();
 }
 
-app.listen(process.env.PORT=3000, () => console.log('server up') );
+app.listen(PORT, () => console.log('server up') );
 
